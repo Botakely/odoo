@@ -421,7 +421,10 @@ class PricelistItem(models.Model):
         """
         currency.ensure_one()
 
-        rule_base = self.base or 'list_price'
+        if self.compute_price == "percentage":
+            rule_base = "pricelist" if self.base_pricelist_id else "list_price"
+        else:
+            rule_base = self.base or 'list_price'
         if rule_base == 'pricelist' and self.base_pricelist_id:
             price = self.base_pricelist_id._get_product_price(
                 product, quantity, currency=self.base_pricelist_id.currency_id, uom=uom, date=date
