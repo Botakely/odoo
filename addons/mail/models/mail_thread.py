@@ -7,6 +7,7 @@ import datetime
 import dateutil
 import email
 import email.policy
+import encodings
 import hashlib
 import hmac
 import json
@@ -37,6 +38,12 @@ from ..web_push import push_to_end_point, DeviceUnreachableError, ENCRYPTION_BLO
 MAX_DIRECT_PUSH = 5
 
 _logger = logging.getLogger(__name__)
+
+# monkey-patching encodings so that it will recognize `charset=cp-850` in emails
+# as a correct alias for cp850 when decoding email parts with the email python library.
+# The key "cp_850" will implicitly match "cp_850" and "cp-850"
+# See https://stackoverflow.com/a/51961225
+encodings.aliases.aliases['cp_850'] = 'cp850'
 
 
 class MailThread(models.AbstractModel):
@@ -1564,6 +1571,9 @@ class MailThread(models.AbstractModel):
                     break
                 if part.get_content_type() == 'binary/octet-stream':
                     _logger.warning("Message containing an unexpected Content-Type 'binary/octet-stream', assuming 'application/octet-stream'")
+                    part.replace_header('Content-Type', 'application/octet-stream')
+                if part.get_content_type() == '*/*':
+                    _logger.warning("Message containing an unexpected Content-Type '*/*', assuming 'application/octet-stream'")
                     part.replace_header('Content-Type', 'application/octet-stream')
                 if part.get_content_type() == 'multipart/alternative':
                     alternative = True
@@ -4375,16 +4385,18 @@ class MailThread(models.AbstractModel):
         res = {'hasWriteAccess': False, 'hasReadAccess': True}
         if not self:
             res['hasReadAccess'] = False
+            res['canPostOnReadonly'] = False
             return res
-        res['canPostOnReadonly'] = self._mail_post_access == 'read'
 
         self.ensure_one()
+        res['canPostOnReadonly'] = self._get_mail_message_access(self.ids, 'create') == "read"
         try:
             self.check_access_rights("write")
             self.check_access_rule("write")
             res['hasWriteAccess'] = True
         except AccessError:
             pass
+
         if 'activities' in request_list:
             res['activities'] = self.with_context(active_test=True).activity_ids.activity_format()
         if 'attachments' in request_list:
@@ -4623,7 +4635,7 @@ class MailThread(models.AbstractModel):
                 }
             }
         }
-        payload['options']['body'] = tools.html2plaintext(body)
+        payload['options']['body'] = html2plaintext(body, include_references=False)
         payload['options']['body'] += self._generate_tracking_message(message)
 
         return payload

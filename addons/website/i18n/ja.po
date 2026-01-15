@@ -7,13 +7,14 @@
 # Wil Odoo, 2025
 # Junko Augias, 2025
 # Ryoko Tsuda <ryoko@quartile.co>, 2025
-# "Junko Augias (juau)" <juau@odoo.com>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-07 18:36+0000\n"
-"PO-Revision-Date: 2025-10-28 08:05+0000\n"
+"POT-Creation-Date: 2025-12-29 18:36+0000\n"
+"PO-Revision-Date: 2026-01-10 08:06+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-17/website/"
 "ja/>\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: website
 #. odoo-javascript
@@ -1582,7 +1583,7 @@ msgstr "マップ・店舗リスト"
 #: code:addons/website/models/website_menu.py:0
 #, python-format
 msgid "A mega menu cannot have a parent or child menu."
-msgstr ""
+msgstr "メガメニューには親メニューや子メニューを設定できません。"
 
 #. module: website
 #: model:ir.model.fields,help:website.field_website_visitor__visit_count
@@ -1853,7 +1854,7 @@ msgstr "テキストハイライト効果を追加"
 #: code:addons/website/models/res_config_settings.py:0
 #, python-format
 msgid "Add Website"
-msgstr ""
+msgstr "ウェブサイトを追加"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_timeline_options
@@ -2005,7 +2006,7 @@ msgstr "変更後"
 #: model_terms:ir.ui.view,arch_db:website.snippets
 #, python-format
 msgid "Alert"
-msgstr "警告"
+msgstr "アラート"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
@@ -2440,7 +2441,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.theme_view_search
 msgid "Author"
-msgstr "著作者"
+msgstr "作成者"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_page_properties_view_form
@@ -7141,7 +7142,7 @@ msgstr "大"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
 msgid "Last 7 Days"
-msgstr "過去7日"
+msgstr "直近７日"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
@@ -7838,7 +7839,7 @@ msgstr "メニュー"
 #: code:addons/website/models/website_menu.py:0
 #, python-format
 msgid "Menus cannot have more than two levels of hierarchy."
-msgstr ""
+msgstr "メニューの階層は2階層までに制限されています。"
 
 #. module: website
 #. odoo-python
@@ -7846,6 +7847,7 @@ msgstr ""
 #, python-format
 msgid "Menus with child menus cannot be added as a submenu."
 msgstr ""
+"子メニューを持つメニューは、他のメニューのサブメニューとして追加できません。"
 
 #. module: website
 #: model:ir.model,name:website.model_base_partner_merge_automatic_wizard
@@ -8067,7 +8069,8 @@ msgstr "詳細"
 #: model_terms:digest.tip,tip_description:website.digest_tip_website_4
 msgid ""
 "More than 90 shapes exist and their colors are picked to match your Theme."
-msgstr "90種類以上の図形が用意されており、それぞれの色はテーマに合わせて自動的に調整"
+msgstr ""
+"90種類以上の図形が用意されており、それぞれの色はテーマに合わせて自動的に調整"
 "されます。"
 
 #. module: website

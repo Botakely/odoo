@@ -1,19 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* l10n_es_edi_verifactu_pos
+# * l10n_es_edi_verifactu_pos
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 16:41+0000\n"
-"PO-Revision-Date: 2025-07-17 16:41+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2026-01-08 19:02+0000\n"
+"PO-Revision-Date: 2026-01-10 17:11+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Spanish <https://translate.odoo.com/projects/odoo-17-l10n/"
+"l10n_es_edi_verifactu_pos/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: l10n_es_edi_verifactu_pos
 #. odoo-python
@@ -23,19 +27,23 @@ msgid ""
 "%(existing_warning)sA Veri*Factu document is waiting to be sent as soon as "
 "possible."
 msgstr ""
-"%(existing_warning)sUn documento Veri*Factu está listo para ser enviado lo antes "
-"posible."
+"%(existing_warning)sUn documento Veri*Factu está listo para ser enviado lo "
+"antes posible."
 
 #. module: l10n_es_edi_verifactu_pos
 #: model:ir.model.fields,help:l10n_es_edi_verifactu_pos.field_pos_order__l10n_es_edi_verifactu_state
 msgid ""
-"- Rejected: Successfully sent to the AEAT, but it was rejected during validation\n"
-"                - Registered with Errors: Registered at the AEAT, but the AEAT has some issues with the sent document\n"
+"- Rejected: Successfully sent to the AEAT, but it was rejected during "
+"validation\n"
+"                - Registered with Errors: Registered at the AEAT, but the "
+"AEAT has some issues with the sent document\n"
 "                - Accepted: Registered by the AEAT without errors\n"
 "                - Cancelled: Registered by the AEAT as cancelled"
 msgstr ""
-"- Rechazado: enviado correctamente a la AEAT, pero fue rechazado durante la validación\n"
-"                - Registrado con errores: registrado en la AEAT, pero la AEAT ha detectado algunos problemas con el documento enviado\n"
+"- Rechazado: enviado correctamente a la AEAT, pero fue rechazado durante la "
+"validación\n"
+"                - Registrado con errores: registrado en la AEAT, pero la "
+"AEAT ha detectado algunos problemas con el documento enviado\n"
 "                - Aceptado: registrado por la AEAT sin errores\n"
 "                - Cancelado: registrado por la AEAT como cancelado"
 
@@ -46,7 +54,8 @@ msgstr ""
 msgid ""
 "A partner has to be specified for the selected Veri*Factu Refund Reason."
 msgstr ""
-"Se debe especificar un contacto para el motivo de reembolso de Veri*Factu seleccionado."
+"Se debe especificar un contacto para el motivo de reembolso de Veri*Factu "
+"seleccionado."
 
 #. module: l10n_es_edi_verifactu_pos
 #: model:ir.model.fields.selection,name:l10n_es_edi_verifactu_pos.selection__pos_order__l10n_es_edi_verifactu_state__accepted
@@ -66,6 +75,21 @@ msgid "Error"
 msgstr "Error"
 
 #. module: l10n_es_edi_verifactu_pos
+#: model:ir.model,name:l10n_es_edi_verifactu_pos.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: l10n_es_edi_verifactu_pos
+#. odoo-javascript
+#: code:addons/l10n_es_edi_verifactu_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid ""
+"Order amount is too large for a simplified invoice, use an invoice instead."
+msgstr ""
+"El importe del pedido es demasiado elevado para una factura simplificada, "
+"utilice una factura en su lugar."
+
+#. module: l10n_es_edi_verifactu_pos
 #: model:ir.model.fields,field_description:l10n_es_edi_verifactu_pos.field_l10n_es_edi_verifactu_document__pos_order_id
 msgid "PoS Order"
 msgstr "Pedido de TPV"
@@ -79,6 +103,11 @@ msgstr "Configuración del TPV"
 #: model:ir.model,name:l10n_es_edi_verifactu_pos.model_pos_order
 msgid "Point of Sale Orders"
 msgstr "Pedidos de TPV"
+
+#. module: l10n_es_edi_verifactu_pos
+#: model:ir.model,name:l10n_es_edi_verifactu_pos.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesión TPV"
 
 #. module: l10n_es_edi_verifactu_pos
 #. odoo-javascript
@@ -123,11 +152,6 @@ msgid "Rejected"
 msgstr "Rechazado"
 
 #. module: l10n_es_edi_verifactu_pos
-#: model_terms:ir.ui.view,arch_db:l10n_es_edi_verifactu_pos.view_pos_order_form_inherit_l10n_es_pos_verifactu
-msgid "Request Veri*Factu Cancellation"
-msgstr "Solicitar cancelación de Veri*Factu"
-
-#. module: l10n_es_edi_verifactu_pos
 #. odoo-javascript
 #: code:addons/l10n_es_edi_verifactu_pos/static/src/overrides/components/ticket_screen/ticket_screen.js:0
 #, python-format
@@ -152,17 +176,16 @@ msgid ""
 "The order can not be invoiced. It is waiting to send a Veri*Factu record to "
 "the AEAT already."
 msgstr ""
-"No se puede facturar el pedido. Ya está pendiente el envío de un registro de Veri*Factu "
-"a la AEAT."
+"No se puede facturar el pedido. Ya está pendiente el envío de un registro de "
+"Veri*Factu a la AEAT."
 
 #. module: l10n_es_edi_verifactu_pos
-#. odoo-javascript
 #. odoo-python
 #: code:addons/l10n_es_edi_verifactu_pos/models/pos_order.py:0
-#: code:addons/l10n_es_edi_verifactu_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
 #, python-format
-msgid "The order needs to be invoiced since its total amount is above 400€."
-msgstr "El pedido debe ser facturado, ya que su importe total supera los 400 €."
+msgid ""
+"The order needs to be invoiced since its total amount is above %(limit)s€."
+msgstr ""
 
 #. module: l10n_es_edi_verifactu_pos
 #. odoo-javascript
@@ -228,22 +251,14 @@ msgstr "Nivel de advertencia de Veri*Factu"
 #: code:addons/l10n_es_edi_verifactu_pos/models/pos_order.py:0
 #, python-format
 msgid ""
-"Veri*Factu documents can only be generated for paid Point of Sale Orders."
+"Veri*Factu documents can only be generated for paid or posted Point of Sale "
+"Orders."
 msgstr ""
-"Los documentos Veri*Factu solo se pueden generar para pedidos de TPV pagados."
+"Los documentos Veri*Factu solo se pueden generar para pedidos de TPV pagados "
+"o publicados."
 
 #. module: l10n_es_edi_verifactu_pos
 #. odoo-python
-#: code:addons/l10n_es_edi_verifactu_pos/models/pos_order.py:0
-#, python-format
-msgid ""
-"Veri*Factu documents can only be generated for paid or posted Point of Sale Orders."
-msgstr ""
-"Los documentos Veri*Factu solo se pueden generar para pedidos de TPV pagados o publicados."
-
-#. module: l10n_es_edi_verifactu_pos
-#. odoo-python
-#: code:addons/l10n_es_edi_verifactu_pos/models/pos_order.py:0
 #: code:addons/l10n_es_edi_verifactu_pos/models/pos_order.py:0
 #, python-format
 msgid "You can only refund products from the same order."
@@ -255,3 +270,8 @@ msgstr "Solo se pueden reembolsar productos del mismo pedido."
 #, python-format
 msgid "You have to specify a refund reason."
 msgstr "Debe especificar un motivo de reembolso."
+
+#, python-format
+#~ msgid "The order needs to be invoiced since its total amount is above 400€."
+#~ msgstr ""
+#~ "El pedido debe ser facturado, ya que su importe total supera los 400 €."
